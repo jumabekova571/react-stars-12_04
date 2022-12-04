@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Stars from './components/Stars';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1 className="text-center">Stars</h1>
+      <h2>Примеры</h2>
+      <div className='mt-2'>
+        <div>{'<Stars/>'}</div>
+        <Stars/>
+      </div>
+      <div className='mt-2'>
+        <div>{'<Stars activeStarsCount={2}/>'}</div>
+        <Stars activeStarsCount={2}/>
+      </div>
+      <div className='mt-2'>
+        <div>{'<Stars maxStarsCount={10} activeStarsCount={7}/>'}</div>
+        <Stars maxStarsCount={10} activeStarsCount={7}/>
+      </div>
+      <div className='mt-2'>
+        <div>{'<Stars fillColor="red" strokeColor="red"/>'}</div>
+        <Stars fillColor="red" strokeColor="red"/>
+      </div>
     </div>
   );
 }
